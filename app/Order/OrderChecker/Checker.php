@@ -9,9 +9,9 @@ abstract class Checker
     protected $nextChecker = null;
     public $errorMessage = '';
 
-    abstract protected function handle($orderData): bool;
+    abstract protected function handle(array $orderData): bool;
 
-    public function check($orderData): void
+    public function check(array $orderData): void
     {
         $result = $this->handle($orderData);
         if (!$result) {
@@ -27,7 +27,7 @@ abstract class Checker
         $this->nextChecker = $checker;
     }
 
-    public function throwException(): void
+    protected function throwException(): void
     {
         throw new OrderCheckerException($this->errorMessage);
     }

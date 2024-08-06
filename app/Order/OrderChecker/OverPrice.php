@@ -8,7 +8,7 @@ class OverPrice extends Checker
 
     public $errorMessage = 'Price is over 2000';
 
-    protected function handle($orderData): bool
+    protected function handle(array $orderData): bool
     {
         $price = (int) $orderData['price'];
         $isOverPrice = ($price > self::MAX_PRICE);
