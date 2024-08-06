@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Response;
 use App\Services\OrderService;
-use App\Exceptions\OrderCheckerException;;
+use App\Exceptions\OrderCheckerException;
 use App\Http\Requests\OrderRequest;
 
 class OrderController extends Controller
