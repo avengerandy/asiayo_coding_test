@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
 class OrderRequest extends FormRequest
@@ -26,7 +27,7 @@ class OrderRequest extends FormRequest
     }
 
     public function validator() {
-        $data = json_decode($this->instance()->getContent(), true);
-        return \Validator::make($data, $this->rules(), $this->messages(), $this->attributes());
+        $data = json_decode($this->getContent(), true);
+        return Validator::make($data, $this->rules(), $this->messages(), $this->attributes());
     }
 }
