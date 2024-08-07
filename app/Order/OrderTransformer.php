@@ -6,7 +6,7 @@ use App\Order\OrderCurrency;
 
 class OrderTransformer
 {
-    public function transform(array $orderData)
+    public function transform(array $orderData): array
     {
         if ($orderData['currency'] == OrderCurrency::USD_FORMAT) {
             $orderData['currency'] = OrderCurrency::TWD_FORMAT;

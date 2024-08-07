@@ -16,7 +16,7 @@ class OrderService
         $this->orderTransformer = $orderTransformer;
     }
 
-    public function transform(array $orderData)
+    public function transform(array $orderData): array
     {
         $orderCheckerChain = $this->orderCheckerChainFactory->create();
         $orderCheckerChain->check($orderData);
