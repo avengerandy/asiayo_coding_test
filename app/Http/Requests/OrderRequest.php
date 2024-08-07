@@ -26,7 +26,8 @@ class OrderRequest extends FormRequest
         ];
     }
 
-    public function validator() {
+    public function validator()
+    {
         $data = json_decode($this->getContent(), true);
         return Validator::make($data, $this->rules(), $this->messages(), $this->attributes());
     }

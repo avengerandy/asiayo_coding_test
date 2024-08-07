@@ -9,7 +9,8 @@ use App\Http\Requests\OrderRequest;
 
 class OrderController extends Controller
 {
-    public function index(OrderRequest $orderRequest, OrderService $orderService) {
+    public function index(OrderRequest $orderRequest, OrderService $orderService)
+    {
         $orderData = $orderRequest->validated();
         try {
             $orderData = $orderService->transform($orderData);
