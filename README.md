@@ -67,69 +67,69 @@ php artisan test --coverage --testsuite Unit
 
 ```
    PASS  Tests\Unit\OrderControllerTest
-  ✓ index call order request and order service than return response json                   0.11s
-  ✓ index call order request and order service than return error message when order servi… 0.01s
+  ✓ index call order request and order service than return respo… 0.13s
+  ✓ index call order request and order service than return error… 0.01s
 
    PASS  Tests\Unit\OrderRequestTest
-  ✓ authorize method returns true                                                          0.02s
-  ✓ rules method returns rules                                                             0.01s
-  ✓ validator return validator make                                                        0.01s
+  ✓ authorize method returns true                                 0.02s
+  ✓ rules method returns rules                                    0.01s
+  ✓ validator return validator make                               0.02s
 
    PASS  Tests\Unit\CheckerTest
-  ✓ error message is empty                                                                 0.02s
-  ✓ check call next when handle return true and next is not null                           0.01s
-  ✓ check not call next when handle return true and next is null                           0.01s
-  ✓ check throw exception when handle return false                                         0.01s
+  ✓ error message is empty                                        0.02s
+  ✓ check call next when handle return true and next is not null  0.02s
+  ✓ check not call next when handle return true and next is null  0.01s
+  ✓ check throw exception when handle return false                0.01s
 
    PASS  Tests\Unit\NonEngilshTest
-  ✓ error message is non english                                                           0.02s
-  ✓ check pass when name is english only                                                   0.01s
-  ✓ check fail when name is contains non english                                           0.01s
+  ✓ error message is non english                                  0.02s
+  ✓ check pass when name is english only                          0.01s
+  ✓ check fail when name is contains non english                  0.01s
 
    PASS  Tests\Unit\NotCapitalizedTest
-  ✓ error message is not capitalized                                                       0.02s
-  ✓ check pass when name is capitalized                                                    0.01s
-  ✓ check fail when name is not capitalized                                                0.01s
+  ✓ error message is not capitalized                              0.02s
+  ✓ check pass when name is capitalized                           0.01s
+  ✓ check fail when name is not capitalized                       0.01s
 
    PASS  Tests\Unit\OverPriceTest
-  ✓ error message is over price                                                            0.02s
-  ✓ check pass when price not greater than 2000                                            0.01s
-  ✓ check fail when price greater than 2000                                                0.01s
+  ✓ error message is over price                                   0.02s
+  ✓ check pass when price not greater than 2000                   0.01s
+  ✓ check fail when price greater than 2000                       0.01s
 
    PASS  Tests\Unit\WrongCurrencyFormatTest
-  ✓ error message is wrong currency format                                                 0.02s
-  ✓ check pass when currency format correct                                                0.02s
-  ✓ check fail when currency format wrong                                                  0.01s
+  ✓ error message is wrong currency format                        0.02s
+  ✓ check pass when currency format correct                       0.02s
+  ✓ check fail when currency format wrong                         0.01s
 
    PASS  Tests\Unit\OrderCheckerChainFactoryTest
-  ✓ create order checker chain                                                             0.02s
+  ✓ create order checker chain                                    0.02s
 
    PASS  Tests\Unit\OrderTransformerTest
-  ✓ not transform data when currency is not usd                                            0.02s
-  ✓ transform data when currency is usd                                                    0.01s
+  ✓ not transform data when currency is not usd                   0.02s
+  ✓ transform data when currency is usd                           0.01s
 
    PASS  Tests\Unit\OrderServiceTest
-  ✓ transform call order checker chain and order transformer                               0.02s
+  ✓ transform call order checker chain and order transformer      0.02s
 
   Tests:    25 passed (40 assertions)
-  Duration: 0.55s
+  Duration: 0.63s
 
-  Exceptions/OrderCheckerException ...................................................... 100.0%
-  Http/Controllers/Controller ........................................................... 100.0%
-  Http/Controllers/OrderController ...................................................... 100.0%
-  Http/Requests/OrderRequest ............................................................ 100.0%
-  Order/OrderChecker/Checker ............................................................ 100.0%
-  Order/OrderChecker/NonEngilsh ......................................................... 100.0%
-  Order/OrderChecker/NotCapitalized ..................................................... 100.0%
-  Order/OrderChecker/OverPrice .......................................................... 100.0%
-  Order/OrderChecker/WrongCurrencyFormat ................................................ 100.0%
-  Order/OrderCheckerChainFactory ........................................................ 100.0%
-  Order/OrderCurrency ................................................................... 100.0%
-  Order/OrderTransformer ................................................................ 100.0%
-  Providers/AppServiceProvider .......................................................... 100.0%
-  Services/OrderService ................................................................. 100.0%
-  ──────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                  Total: 100.0 %
+  Exceptions/OrderCheckerException ............................. 100.0%
+  Http/Controllers/Controller .................................. 100.0%
+  Http/Controllers/OrderController ............................. 100.0%
+  Http/Requests/OrderRequest ................................... 100.0%
+  Order/OrderChecker/Checker ................................... 100.0%
+  Order/OrderChecker/NonEngilsh ................................ 100.0%
+  Order/OrderChecker/NotCapitalized ............................ 100.0%
+  Order/OrderChecker/OverPrice ................................. 100.0%
+  Order/OrderChecker/WrongCurrencyFormat ....................... 100.0%
+  Order/OrderCheckerChainFactory ............................... 100.0%
+  Order/OrderCurrency .......................................... 100.0%
+  Order/OrderTransformer ....................................... 100.0%
+  Providers/AppServiceProvider ................................. 100.0%
+  Services/OrderService ........................................ 100.0%
+  ─────────────────────────────────────────────────────────────────────
+                                                         Total: 100.0 %
 ```
 
 #### Feature
@@ -140,33 +140,33 @@ php artisan test --coverage --testsuite Feature
 
 ```
    PASS  Tests\Feature\OrderTest
-  ✓ order success return same data when currency is not usd                                0.11s
-  ✓ order format wrong than return error                                                   0.02s
-  ✓ order name is contains non english than return error                                   0.02s
-  ✓ order name is not capitalized than return error                                        0.01s
-  ✓ order price greater than 2000 than return error                                        0.01s
-  ✓ order currency format wrong than return error                                          0.01s
-  ✓ order success return transform data when currency is usd                               0.02s
+  ✓ order success return same data when currency is not usd       0.12s
+  ✓ order format wrong than return error                          0.02s
+  ✓ order name is contains non english than return error          0.02s
+  ✓ order name is not capitalized than return error               0.02s
+  ✓ order price greater than 2000 than return error               0.02s
+  ✓ order currency format wrong than return error                 0.01s
+  ✓ order success return transform data when currency is usd      0.01s
 
   Tests:    7 passed (14 assertions)
-  Duration: 0.23s
+  Duration: 0.25s
 
-  Exceptions/OrderCheckerException ...................................................... 100.0%
-  Http/Controllers/Controller ........................................................... 100.0%
-  Http/Controllers/OrderController ...................................................... 100.0%
-  Http/Requests/OrderRequest ............................................................ 100.0%
-  Order/OrderChecker/Checker ............................................................ 100.0%
-  Order/OrderChecker/NonEngilsh ......................................................... 100.0%
-  Order/OrderChecker/NotCapitalized ..................................................... 100.0%
-  Order/OrderChecker/OverPrice .......................................................... 100.0%
-  Order/OrderChecker/WrongCurrencyFormat ................................................ 100.0%
-  Order/OrderCheckerChainFactory ........................................................ 100.0%
-  Order/OrderCurrency ................................................................... 100.0%
-  Order/OrderTransformer ................................................................ 100.0%
-  Providers/AppServiceProvider .......................................................... 100.0%
-  Services/OrderService ................................................................. 100.0%
-  ──────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                  Total: 100.0 %
+  Exceptions/OrderCheckerException ............................. 100.0%
+  Http/Controllers/Controller .................................. 100.0%
+  Http/Controllers/OrderController ............................. 100.0%
+  Http/Requests/OrderRequest ................................... 100.0%
+  Order/OrderChecker/Checker ................................... 100.0%
+  Order/OrderChecker/NonEngilsh ................................ 100.0%
+  Order/OrderChecker/NotCapitalized ............................ 100.0%
+  Order/OrderChecker/OverPrice ................................. 100.0%
+  Order/OrderChecker/WrongCurrencyFormat ....................... 100.0%
+  Order/OrderCheckerChainFactory ............................... 100.0%
+  Order/OrderCurrency .......................................... 100.0%
+  Order/OrderTransformer ....................................... 100.0%
+  Providers/AppServiceProvider ................................. 100.0%
+  Services/OrderService ........................................ 100.0%
+  ─────────────────────────────────────────────────────────────────────
+                                                         Total: 100.0 %
 ```
 
 ### 設計模式
