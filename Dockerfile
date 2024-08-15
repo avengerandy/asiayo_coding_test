@@ -17,6 +17,7 @@ RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 RUN groupadd -r laravel
 RUN useradd -r -g laravel laravel
 RUN chown -R laravel:laravel /usr/src/codingTest
+USER laravel
 RUN composer install
 RUN composer dump-autoload
 
