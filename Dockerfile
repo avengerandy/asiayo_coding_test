@@ -4,8 +4,8 @@ COPY . .
 
 # xdebug for test coverage
 RUN pecl install xdebug
-RUN echo zend_extension=$(find / -name xdebug.so) >> /usr/local/etc/php/conf.d/docker-php-ext-sodium.ini
-RUN echo xdebug.mode=coverage >> /usr/local/etc/php/conf.d/docker-php-ext-sodium.ini
+RUN docker-php-ext-enable xdebug
+RUN echo xdebug.mode=coverage >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 # zip for composer
 RUN apt-get update
